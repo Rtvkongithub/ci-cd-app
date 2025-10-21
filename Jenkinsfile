@@ -26,7 +26,7 @@ pipeline {
             steps {
                 script {
                     sh 'docker stop myapp || true && docker rm myapp || true'
-                    sh 'docker run -d --name myapp -p 8080:8080 myapp:latest'
+                    sh 'docker run -d --name myapp -p 8080:8081 myapp:latest'
                 }
             }
         }
